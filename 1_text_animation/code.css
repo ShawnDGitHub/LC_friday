@@ -1,0 +1,135 @@
+/*1- position: relative 是为了设置元素相对的位置，需要设置后 */
+/*   top 才会生效 */
+  /* position - https://developer.mozilla.org/zh-CN/docs/Web/CSS/position */
+
+/*2- 本示例中 display: inline-block 设置后
+     overflow: hidden 才生效 */
+  /* overflow - https://developer.mozilla.org/zh-CN/docs/Web/CSS/overflow */
+
+  /* animation - https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation */
+  
+  /* Material Design 动效速度指南 - https://www.material.io/design/motion/speed.html#easing */
+
+/*3- 理解前端尺寸vw、vh、rem、em */
+/*    https://zhuanlan.zhihu.com/p/96721026 */
+
+:root {
+  font-size: 32px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: Helvetica;
+}
+
+#container {
+  width: 600px;
+}
+
+h1 {
+  margin: 0;
+  letter-spacing: -3px;
+}
+
+p {
+  font-size: .9rem;
+  color: #666;
+  line-height: 1rem;
+  opacity: 0;
+  position: relative;
+  top: 1rem;
+  animation: .3s fade-in cubic-bezier(0.4, 0, 0.2, 1) forwards,
+   .2s swift-up cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  animation-delay: .3s;
+}
+
+span {
+  display: inline-block;
+  /* 用来观察 */
+  /* background-color: #666; */
+  overflow: hidden;
+  position: relative;
+  top: 1rem;
+  animation: .3s swift-up cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+i {
+  font-style: normal;
+  position: relative;
+  top: 2.2rem;
+  animation: .3s swift-up cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+
+@keyframes fade-in {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes swift-up {
+  to {
+    top: 0rem;
+  }
+}
+
+span:nth-of-type(1) i {
+  animation-delay: 0s;
+}
+
+span:nth-of-type(2) i {
+  animation-delay: 0s;
+}
+
+span:nth-of-type(3) i {
+  animation-delay: .1s;
+}
+
+span:nth-of-type(4) i {
+  animation-delay: .1s;
+}
+
+span:nth-of-type(5) i {
+  animation-delay: .2s;
+}
+
+span:nth-of-type(6) i {
+  animation-delay: .23s;
+}
+
+span:nth-of-type(7) i {
+  animation-delay: .25s;
+}
+
+/* --- */
+span:nth-of-type(1) {
+  animation-delay: 0s;
+}
+
+span:nth-of-type(2) {
+  animation-delay: 0s;
+}
+
+span:nth-of-type(3) {
+  animation-delay: .1s;
+}
+
+span:nth-of-type(4) {
+  animation-delay: .1s;
+}
+
+span:nth-of-type(5) {
+  animation-delay: .2s;
+}
+
+span:nth-of-type(6) {
+  animation-delay: .23s;
+}
+
+span:nth-of-type(7) {
+  animation-delay: .25s;
+}
